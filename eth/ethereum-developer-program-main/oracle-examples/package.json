@@ -1,0 +1,24 @@
+{
+  "name": "oracle-examples",
+  "version": "1.0.0",
+  "scripts": {
+    "node": "hardhat node",
+    "deploy": "hardhat ignition deploy ./ignition/modules/Oracle.ts",
+    "v1": "node ./callOracle.ts",
+    "v2": "node ./listenOracle.ts"
+  },
+  "type": "module",
+  "author": "Kerala Blockchain Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "@types/node": "^22.18.12",
+    "hardhat": "^3.0.9",
+    "typescript": "~5.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "viem": "^2.38.4"
+  }
+}

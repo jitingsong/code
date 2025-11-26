@@ -1,0 +1,21 @@
+{
+  "name": "testing-with-hardhat",
+  "version": "1.0.0",
+  "scripts": {
+    "node": "npx hardhat node",
+    "test": "npm run test-sol && npm run test-ts",
+    "test-sol": "npx hardhat test solidity",
+    "test-ts": "npx hardhat test nodejs",
+    "deploy": "npx hardhat ignition deploy ignition/modules/Cert.ts --network local"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "@types/node": "^22.18.12",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.0.9",
+    "typescript": "~5.8.3",
+    "viem": "^2.38.4"
+  },
+  "type": "module"
+}

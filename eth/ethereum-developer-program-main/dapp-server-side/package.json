@@ -1,0 +1,30 @@
+{
+  "name": "dapp-server-side",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch ./src/bin/server",
+    "start": "tsx ./src/bin/server.ts",
+    "listen": "tsx ./src/listener.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "viem": "^2.38.5"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.5",
+    "@types/http-errors": "^2.0.5",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "type": "module"
+}
