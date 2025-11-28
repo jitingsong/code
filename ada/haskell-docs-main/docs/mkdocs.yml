@@ -1,0 +1,192 @@
+site_name: The Haskell Guide
+
+site_url: https://haskell-docs.netlify.app/
+
+repo_url: https://github.com/reubenharry/haskell-docs
+
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    # - announce.dismiss
+    - content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: img/favicon.svg
+  icon:
+    logo: simple/haskell
+
+edit_uri: 'edit/main/docs/docs/'
+
+
+extra:
+  analytics:
+    provider: google
+    property: G-7QNLSWWDET
+
+
+extra_javascript:
+  - javascripts/feedback.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  # - social
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.snippets
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: reubenharry
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# extra:
+#   version:
+#     provider: mike
+
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Quick start: gettingstarted/overview.md
+    - Example Haskell File: gettingstarted/example.md
+    - Configuration: gettingstarted/versions.md
+  - Basics:
+    - Values and Types: basics/types.md
+    - Creating types: basics/createData.md
+    - Functions: basics/functions.md
+    - Syntactic constructs: basics/syntax.md
+  - Thinking in Haskell:
+    - Type Checking: thinkingfunctionally/typechecking.md
+    - Type Inference: thinkingfunctionally/typeinference.md
+    - Purity: thinkingfunctionally/purity.md
+    - Immutability: thinkingfunctionally/immutability.md
+    - Thinking functionally: thinkingfunctionally/hof.md
+  - Typeclasses:
+    - Typeclasses: typeclasses/overview.md
+    - Important typeclasses: typeclasses/survey.md
+  - Laziness:
+    - Laziness: laziness/laziness.md
+  - Libraries:
+    - How to use libraries: packages/overview.md
+    - Overview of the ecosystem: packages/survey.md
+    - Dictionaries and sets: packages/containers.md
+    - Property-based testing: packages/quickcheck.md 
+    - JSON: packages/aeson.md
+    - Side-Effects: packages/mtl.md
+    - Parsing: packages/megaparsec.md
+    - Lenses: packages/lens.md
+    - Generic Programming: packages/generics.md
+    - Metaprogramming: packages/template.md
+  - Case Study:
+    - Overview: casestudy/overview.md
+    - Chess Logic: casestudy/chess.md
+    - Parsing: casestudy/parser.md
+    - Evaluator: casestudy/evaluator.md
+    - REPL: casestudy/repl.md
+    - Tests: casestudy/tests.md
+    # - Reading JSON: casestudy/json.md
+  - Gotchas:
+    - Lists: gotchas/lists.md
+    - Punning: gotchas/punning.md
+    - Strings: gotchas/strings.md
+    - Show value: gotchas/show.md
+    - Updating a variable: gotchas/mutation.md
+    - Varying output type: gotchas/functiontype.md
+    - Length of tuple: gotchas/tupleLength.md
+    - Confusing type and value: gotchas/typevsvalue.md
+  - FAQs:
+    - Multiple Arguments: faqs/multipleArguments.md
+    - Optional Arguments: faqs/optionalArguments.md
+    - Dollar sign: faqs/dollar.md
+    - Coercions: faqs/convertingnumbers.md
+    - fmap with a function: faqs/functionFunctor.md
+    - Converting Numbers: faqs/numbers.md
+    - Debugging: faqs/debugging.md
+    - I/O: faqs/io.md
+    - Output depends on input: faqs/dependentOutput.md
+    - Newtype: faqs/newtype.md
+  - Resources:
+    - Overview: resources/resources.md
+    - Articles: resources/articles.md
+    - Books: resources/books.md
+
+
+  
